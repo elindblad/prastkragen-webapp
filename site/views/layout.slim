@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+html lang="en"
+    head
+        meta charset="UTF-8"/
+        meta name="viewport" content="width=device-width, initial-scale=1.0"/
+        meta http-equiv="X-UA-Compatible" content="ie=edge"/
+        link rel="stylesheet" href="css/style.css"/
+        link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700"/ 
+        link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/
+        link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"
+        title Prästkragens Förskola
+    body
+    script src="js/menutoggle.js"
+    header.mobile
+        div.coverimg
+        div.logoimg
+            / img src="img/pojkeingenhand.png" alt="Pojke"
+            img src="img/logo.png" alt="Logga"
+        nav
+            i.material-icons onclick="toggleMenu()" menu
+            a.homebtn href="index.html"
+                i.material-icons style="grid-column: 4;" home
+        div.mobilemenu
+            ul
+                li
+                    a.navlink href="nyheter.html" Nyheter
+                li
+                    a.navlink href="verksamhet.html" Verksamhet
+                li
+                    a.navlink href="personal.html" Personal
+                li
+                    a.navlink href="blanketter.html" Blanketter
+                li
+                    a.navlink href="lankar.html" Länkar
+                li
+                    a.navlink href="kontaktinfo.html" Kontaktinformation
+    div.wrapper
+        == yield
+    footer
+        a.phone href="tel:031266318"
+            i.material-icons id="contacticon" contact_phone
+            p.phone 031-26 63 18
+        a.adress href="https://goo.gl/maps/aAnq4EiFu8A2"
+            i.material-icons id="adressicon" location_on
+            p.adress Oxledsvägen 4 43367 SÄVEDALEN
+        a.facebook href="https://www.facebook.com/Pr%C3%A4stkragens-F%C3%B6rskola-210900089034186/"
+            i class="fab fa-facebook-square"
+            p.facebook Facebook

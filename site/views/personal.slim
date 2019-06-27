@@ -1,0 +1,28 @@
+div.personal
+    h2 Personal
+    p Det är vi som har förmonen att ta hand om era barn
+    / article.usercard
+    /     .profile-img
+    /         img src="img/profilepic.jpg"
+    /     .info
+    /         p.name Lena Andersson
+    /         p.email Lenaandersson@example.com
+    /         p.phone 555-123456
+    /         p.department Prästkragen
+    / article.usercard
+    /     .profile-img
+    /         img src="img/profilepic.jpg"
+    /     .info
+    /         p.name Lena Andersson
+    /         p.email Lenaandersson@example.com
+    /         p.phone 555-123456
+    /         p.department Prästkrage
+    - data.each do |info| 
+        article.usercard
+            .profile-img
+                img src="img/profilepic.jpg"
+            .info
+                p.name = info[0]
+                p.email = info[1]
+                p.phone = info[2]
+                p.department = info[3]
