@@ -8,7 +8,12 @@
         height: auto;
         font-family: 'Roboto', sans-serif;
     }
-
+    header.desktop {
+         display: none;
+    }
+    div.coverimgdesktop {
+        display: none;
+    }
     a {
         text-decoration: none; 
         color: black;
@@ -489,10 +494,30 @@
 }
 @media only screen and (min-device-width: 500px) {
     body {
-        
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
+        scrollbar-width: thin;
     }
 
     header.mobile {
         display: none;
+    }
+
+    header.desktop {
+        background-color: rgba(255, 255, 255, 0.692);
+        width: 100vw;
+        height: 50px;
+        padding: 10px;
+        position: absolute;
+    }
+    div.coverimgdesktop {
+        height: 650px;
+        background-image: url('/img/coverimg.jpg')
+    }
+
+    div.wrapper {
+        margin: 0 20vw 0 20vw;
+        padding: 20px;
+        background-color: lightgrey;
     }
 }
