@@ -1,3 +1,4 @@
+/* mobile */
 @media only screen and (max-device-width: 500px) {
     body {
         /* background: linear-gradient(to bottom, rgba(183,222,237,1) 0%, rgba(113,206,239,1) 32%, rgba(33,181,226,1) 64%, rgba(26,93,112,1) 100%); */
@@ -488,6 +489,10 @@
 }
 @media only screen and (min-device-width: 500px) {
     body {
-        background-color: black;
+        
+    }
+
+    header.mobile {
+        display: none;
     }
 }
