@@ -1,0 +1,1 @@
+rerun --pattern *.rb -- rackup --port 4567 config.ru
