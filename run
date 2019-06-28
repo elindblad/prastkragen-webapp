@@ -1,1 +1,1 @@
-rerun --pattern *.rb -- rackup --port 4567 config.ru
+rerun --pattern *.rb,*.slim -- rackup --port 4567 config.ru
