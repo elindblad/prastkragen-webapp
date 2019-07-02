@@ -354,6 +354,8 @@
     }
     div.infotext h2 {
         text-align: center;
+        border-bottom: #1a5d70 solid 3px;
+        padding-bottom: 10px;
     }
     div.news {
         grid-row: 3;
@@ -517,7 +519,7 @@
         z-index: 99;
         display: table;
         text-align: right;
-        -webkit-transition: background .4s; /* For Safari 3.1 to 6.0 */
+        -webkit-transition: background .4s;
         transition: background .4s;
     }
     
@@ -572,11 +574,11 @@
         border-radius: 300px;
     }
 
-    h2 {
+    /* h2 {
         text-align: center;
         border-bottom: #1a5d70 solid 3px;
         padding-bottom: 10px;
-    }
+    } */
 
     div.mainnav {
         grid-row: 2;
@@ -592,6 +594,44 @@
     div.mainnav a {
         margin: 0 10px;
         color: white;
+    }
+
+    div.news {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+    div.news h1 {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    div.news article {
+        grid-row: 2;
+        max-width: 350px;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        padding: 20px;
+        line-height: 1.4em;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        margin: 0 14px 30px 14px;
+        border-radius: 5px;
+        max-height: 450px;
+    }
+
+    div.news h1,div.news h2, div.news h3 {
+        text-align: center;
+    }
+
+    div.allanyheter {
+        text-align: center;
+    }
+
+    div.allanyheter a {
+        color: white;
+        padding: 1em 1.75em;
+        background-color: #21B5E2;     
+        border-radius: 300px;
     }
 
 }
