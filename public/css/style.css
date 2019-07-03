@@ -11,7 +11,7 @@
     header.desktop {
          display: none;
     }
-    div.coverimg {
+    div.coverimgdesktop {
         display: none;
     }
     a {
@@ -544,7 +544,7 @@
         display: table-cell;
     }
 
-    div.coverimg {
+    div.coverimgdesktop {
         height: 650px;
         background-attachment: fixed;
         background-position: center;
