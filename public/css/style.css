@@ -11,7 +11,7 @@
     header.desktop {
          display: none;
     }
-    div.coverimgdesktop {
+    div.coverimg {
         display: none;
     }
     a {
@@ -544,13 +544,15 @@
         display: table-cell;
     }
 
-    div.coverimgdesktop {
+    div.coverimg {
         height: 650px;
-        background-image: url('/img/coverimg.jpg');
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+    div#desktop {
+        background-image: url('/img/coverimg.jpg');
     }
 
     /* div.wrapper {
@@ -564,7 +566,7 @@
         display: grid;
         grid-template-columns: auto 1fr;
         grid-column-gap: 100px;
-        padding: 20px 0 20px 0;
+        padding: 20px;
         margin: 30px 0 0 0;
         border-top: 2px solid white;
         border-bottom: 2px solid white;
@@ -660,5 +662,29 @@
         background-color: #21B5E2;     
         border-radius: 300px;
     }
+    div.circlenav {
+        padding: 20px;
+        display: table;
+    }
 
+    div.circlenav a {
+        float: left;
+    }
+
+    
+    div.pic {
+        height: 170px;
+        width: 170px;
+        background-color: black;
+        border-radius: 50%;
+        grid-row: span 2;
+    }
+
+    a#pic1 div.pic {
+        background-image: url('/img/verksamhet.jpg');
+    }
+
+    a#pic2 div.pic {
+        background-image: url('/img/blanketter.jpg');
+    }
 }
