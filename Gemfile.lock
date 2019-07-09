@@ -3,12 +3,22 @@ GEM
   specs:
     bcrypt (3.1.13)
     byebug (11.0.1)
+    concurrent-ruby (1.1.5)
+    ffi (1.11.1)
     mustermann (1.0.3)
     pg (1.1.4)
     rack (2.0.7)
     rack-protection (2.0.5)
       rack
-    sequel (5.21.0)
+    rb-fsevent (0.10.3)
+    rb-inotify (0.10.0)
+      ffi (~> 1.0)
+    sass (3.7.4)
+      sass-listen (~> 4.0.0)
+    sass-listen (4.0.0)
+      rb-fsevent (~> 0.9, >= 0.9.4)
+      rb-inotify (~> 0.9, >= 0.9.7)
+    sequel (5.22.0)
     sinatra (2.0.5)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -17,6 +27,9 @@ GEM
     slim (4.0.1)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
+    sprockets (3.7.2)
+      concurrent-ruby (~> 1.0)
+      rack (> 1, < 3)
     sqlite3 (1.4.1)
     temple (0.8.1)
     tilt (2.0.9)
@@ -29,9 +42,11 @@ DEPENDENCIES
   byebug
   pg
   rack
+  sass
   sequel
   sinatra
   slim
+  sprockets
   sqlite3
 
 BUNDLED WITH
