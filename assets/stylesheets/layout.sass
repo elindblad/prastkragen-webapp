@@ -9,7 +9,11 @@
     a 
         text-decoration: none
         color: black
-  
+    
+    p
+        font-family: 'Roboto' sans-serif
+        font-weight: 300
+    
     header.mobile
         display: none
 
@@ -36,6 +40,9 @@
         width: 116px
         display: table-cell
 
+    div.headerlogo a img 
+        width: 116px
+
     div.coverimgdesktop
         height: 650px
         background-attachment: fixed
@@ -45,3 +52,18 @@
 
     div#desktop
         background-image: url('/img/coverimg.jpg')
+
+    div.mainnav
+        grid-row: 2
+        grid-column-start: span 4
+        color: white !important
+        display: table-cell
+        text-align: right
+        padding-right: 80px
+        vertical-align: middle
+        font-size: 18px
+        font-weight: 300
+
+    div.mainnav a
+        margin: 0 10px
+        color: white
