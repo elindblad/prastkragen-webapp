@@ -1,12 +1,15 @@
 $(function() {
-    var header = $("header.desktop");
+    console.log($(window).scrollTop())
     $(window).scroll(function() {
-        var scroll = $(window).scrollTop();
-
-        if (scroll >= 550) {
-            header.addClass("dark");
+        if ($(window).scrollTop() >= 566) {
+            $("header.desktop").addClass("dark");
         } else {
-            header.removeClass("dark");
+            $("header.desktop").removeClass("dark");
         }
+        // if ($(window).scrollTop() >= 165) {
+        //     $("nav.headermobile").addClass("fixed");
+        // } else {
+        //     $("nav.headermobile").removeClass("fixed");
+        // }
     });
 });
