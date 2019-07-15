@@ -1,5 +1,182 @@
 // mobile
-// @media only screen and (max-device-width: 660px)
+@media only screen and (max-device-width: 660px)
+    div.allanyheter
+        display: none
+
+    div.main
+        display: grid
+        grid-template-columns: 0 1fr 0
+        grid-template-rows: 0 repeat(3, auto)
+        grid-column-gap: 20px
+
+    div.infotext 
+        padding: 20px
+        line-height: 1.4em
+        font-family: 'Roboto', sans-serif
+        font-weight: 300
+        grid-column: 2
+        grid-row: 2
+    
+    div.circlenav 
+        display: grid
+        grid-template-rows: 170px 1fr
+        grid-template-columns: 170px 1fr 1fr 170px
+        grid-row: 3
+        grid-column: 2
+        padding: 20px
+    
+    div.pic 
+        height: 170px
+        width: 170px
+        background-color: black
+        border-radius: 50%
+        grid-row: span 2
+    
+    a#pic1 div.pic 
+        background-image: url('/img/verksamhet.jpg')
+    
+    a#pic1 
+        grid-column: 1
+        grid-row: span 2
+    
+    a#pic1 div.pic1info 
+        text-align: center
+        grid-row: 2
+        grid-column: 1
+    
+    div.pic1info h3 
+        margin: 6px 0 4px 0
+    
+    div.pic1info p 
+        margin: 0
+    
+    a#pic2 div.pic2info 
+        text-align: center
+        grid-row: 2
+        grid-column: 4
+        margin: 0 !important
+    
+    div.pic2info h3 
+        margin: 6px 0 4px 0
+    
+    div.pic2info p 
+        margin: 0
+
+    a#pic2 div.pic 
+        background-image: url('/img/blanketter.jpg')
+    
+    a#pic2 
+        grid-column: 4
+        grid-row: span 2
+
+    @media only screen and (max-device-width: 430px) 
+        div.circlenav 
+            display: grid
+            grid-template-rows: 170px 1fr 170px 1fr
+            grid-template-columns: 170px
+            justify-content: center
+        
+        div.pic 
+            height: 170px
+            width: 170px
+            background-color: black
+            border-radius: 50%
+            grid-row: span 1
+        
+        a#pic1 
+            grid-column: 1
+            grid-row: span 2
+            margin-bottom: 10px
+    
+        a#pic1 div.pic 
+            background-image: url('/img/verksamhet.jpg')
+        
+        div.pic1info 
+            text-align: center
+            grid-row: 2
+            grid-column: 1
+        
+        div.pic1info h3 
+            margin: 6px 0 4px 0
+        
+        div.pic1info p 
+            margin: 0
+        
+        div.pic2info 
+            text-align: center
+            grid-row: 2
+            grid-column: 1
+            margin: 0 !important
+        
+        div.pic2info h3 
+            margin: 6px 0 4px 0
+        
+        div.pic2info p 
+            margin: 0
+        
+        a#pic2 
+            grid-column: 1
+            grid-row: span 2
+        
+        a#pic2 div.pic 
+            background-image: url('/img/blanketter.jpg')
+        
+    div.infotext h2 
+        text-align: center
+        border-bottom: #1a5d70 solid 3px
+        padding-bottom: 10px
+
+    div.news 
+        grid-row: 4
+        grid-column: 2
+        padding: 0 20px 0 20px
+
+    div.news h1 
+        text-align: center
+        border-bottom: #1a5d70 solid 3px
+        padding-bottom: 10px
+        margin-bottom: 30px
+    
+    div.news article 
+        background-color: white
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+        padding: 20px
+        line-height: 1.4em
+        font-family: 'Roboto', sans-serif
+        font-weight: 300
+        margin-bottom: 30px
+        border-radius: 5px
+    
+    div.news article h2 
+        text-align: center
+        margin-bottom: 5px
+    
+
+    div.news article h3 
+        text-align: center
+        margin: 0 0 0 0
+        color: #1a5d70
+    
+    div.news a 
+        font-weight: 400
+    
+    div.news article span 
+
+        float: right
+    div.blanketter 
+        padding: 20px 40px 40px 40px
+    
+    div.blanketter h2 
+        text-align: center
+        border-bottom: #1a5d70 solid 3px
+        padding-bottom: 10px
+    
+    div.blanketter a 
+        text-decoration: underline
+    
+    .blomman 
+        display: none
+
 // desktop
 @media only screen and (min-device-width: 660px) 
     div.main
