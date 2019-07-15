@@ -7,7 +7,7 @@ Bundler.require
 map '/assets' do
     environment = Sprockets::Environment.new
     environment.append_path 'assets/stylesheets'
-    environment.css_compressor = :scss
+    environment.css_compressor = :scssc
     run environment
 end
 
