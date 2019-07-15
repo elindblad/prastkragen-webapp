@@ -1,9 +1,11 @@
+// mobile
+// @media only screen and (max-device-width: 660px)
 // desktop
 @media only screen and (min-device-width: 660px) 
-    .main
+    div.main
         margin: 0 17vw 0 17vw
 
-    .infotext
+    div.infotext
         display: grid
         grid-template-columns: auto 1fr
         grid-column-gap: 100px
@@ -12,42 +14,42 @@
         border-top: 2px solid white
         border-bottom: 2px solid white
 
-    .infotext h2
+    div.infotext h2
         font-size: 34px
         font-weight: 300
 
-    .infotext p
+    div.infotext p
         font-weight: 300
         line-height: 1.4em
 
-    .centertext
+    div.centertext
         position: relative
         text-align: center
         top: 50%
         margin: 0 auto
 
-    .centertext p
+    div.centertext p
         margin: 0
         font-size: 60px
         color: white
         font-weight: 400
 
-    .centertext a
+    div.centertext a
         font-size: 15px
         color: white
         background-color: #1a5d70
         padding: 1em 1.75em
         border-radius: 300px
 
-    .news
+    div.news
         display: grid
         grid-template-columns: 1fr 1fr 1fr
         grid-template-rows: auto
 
-    .news h1
+    div.news h1
         grid-row: 1
         grid-column: 2
-    .news article
+    div.news article
         grid-row: 2
         max-width: 350px
         background-color: white
@@ -60,36 +62,31 @@
         border-radius: 5px
         max-height: 450px
 
-    .news h1,.news h2,.news h3
+    div.news 
+        h1,h2,h3
+            text-align: center
+
+    div.allanyheter
         text-align: center
 
-    .allanyheter
-        text-align: center
-
-    .allanyheter a
+    div.allanyheter a
         color: white
         padding: 1em 1.75em
         background-color: #21B5E2
         border-radius: 300px
 
-    .circlenav
+    div.circlenav
         padding: 20px
         display: table
 
-    .circlenav a
+    div.circlenav a
         float: left
-    .pic
+    div.pic
         height: 170px
         width: 170px
         background-color: black
         border-radius: 50%
         grid-row: span 2
-
-    // h2 {
-    // *    text-align: center;
-    // *    border-bottom: #1a5d70 solid 3px;
-    // *    padding-bottom: 10px;
-    // *
 
     a#pic1 div.pic
         background-image: url('/img/verksamhet.jpg')
