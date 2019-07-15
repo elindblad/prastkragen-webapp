@@ -3,5 +3,5 @@ Bundler.require
 require_relative 'app'
 
 task :run do
-    sh 'bundle exec rerun --no-notify --ignore "*.{slim,js,css}" "rackup --host 0.0.0.0 --port 4567"'
+    sh 'bundle exec rerun --no-notify --ignore "*.{slim,js,css,sass}" "rackup --host 0.0.0.0 --port 4567"'
 end
