@@ -20,42 +20,15 @@
     div.wrapper
         min-height: 58vh
         height: auto
-        padding-top: 27vh
+        // padding-top: 27vh
 
     header.mobile
-        height: 27vh
+        height: 21vh
         width: 100vw
-        position: fixed
+        // position: fixed
         display: grid
-        grid-template-rows: repeat(10, 3vh)
+        grid-template-rows: repeat(7, 3vh)
         grid-template-columns: 20px auto 20px
-
-    header.mobile i.material-icons
-        font-size: 5vh
-        color: rgba(0, 0, 0, 0.54)
-        display: flex
-        justify-content: center
-        align-items: center
-        grid-row: 2
-        grid-column: 2
-
-    header.mobile a.homebtn
-        grid-row: 2
-        grid-column: 4
-        display: flex
-        justify-content: center
-        align-items: center
-
-    header.mobile nav
-        background-color: white
-        min-height: 40px
-        height: 6vh
-        grid-row: 8/9
-        grid-column: span 3
-        display: grid
-        grid-template-columns: 0rem 3rem auto 3rem 0rem
-        grid-template-rows: 0rem 1fr 0rem
-        grid-column-gap: 1rem
 
     header.mobile div.coverimg
         height: 21vh
@@ -70,9 +43,66 @@
         display: flex
         justify-content: center
         align-items: center
+        img
+            height: inherit
     
-    div.logoimg img
-        height: inherit
+    nav.headermobile
+        background-color: white
+        position: sticky
+        top: 0
+        min-height: 40px
+        height: 6vh
+        width: 100%
+        display: grid
+        grid-template-columns: 0rem 3rem auto 3rem 0rem
+        grid-template-rows: 0rem 1fr 1px 0rem
+        grid-column-gap: 1rem
+
+    nav.headermobile i.material-icons
+        font-size: 5vh
+        color: rgba(0, 0, 0, 0.54)
+        display: flex
+        justify-content: center
+        align-items: center
+        grid-row: 2
+        grid-column: 2
+
+    nav.headermobile a.homebtn
+        grid-row: 2
+        grid-column: 4
+        display: flex
+        justify-content: center
+        align-items: center
+
+    nav.headermobile.fixed
+        position: fixed
+
+    header.mobile.fixed
+        display: none
+
+    div.mobilemenu 
+        height: 0
+        width: 100vw
+        background-color: #1a5d70
+        transition: height 0.35s
+        overflow: hidden
+        grid-row: 3
+        ul
+            margin: 0
+            list-style: none
+            text-decoration: none
+            li
+                margin: 24px 0px
+                
+    div.show
+        height: 281px
+
+    a.navlink
+        font-size: 1em
+        text-decoration: none
+        color: white
+        font-family: 'Roboto', sans-serif
+        font-weight: 500
 
     footer
         min-height: 100px
@@ -117,30 +147,6 @@
             height: 195px
             grid-template-rows: 0 repeat(1,1fr)
 
-
-    div.mobilemenu 
-        height: 0
-        width: 100vw
-        background-color: #1a5d70
-        transition: height 0.35s
-        overflow: hidden
-        grid-row: 10
-        ul
-            margin: 0
-            list-style: none
-            text-decoration: none
-            li
-                margin: 24px 0px
-                
-    div.show
-        height: 281px
-
-    a.navlink
-        font-size: 1em
-        text-decoration: none
-        color: white
-        font-family: 'Roboto', sans-serif
-        font-weight: 500
 // desktop
 @media only screen and (min-device-width: 660px) 
     body 
@@ -157,7 +163,7 @@
         font-family: 'Roboto' sans-serif
         font-weight: 300
     
-    header.mobile
+    header.mobile, nav.headermobile
         display: none
 
     header.desktop
