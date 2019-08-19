@@ -22,6 +22,10 @@ html lang="en"
                 img src="img/newlogo.png" alt="Logga"
         nav.headermobile
             i.material-icons onclick="toggleMenu()" menu
+            -if get_login_status() != nil
+                p = "Inloggad som #{get_login_status()}"
+                form.logoutbtn action="/logout" method="post"
+                    input.btn type="submit" value="Logga ut"
             a.homebtn href="/"
                 i.material-icons style="grid-column: 4;" home
             div.mobilemenu
@@ -38,6 +42,8 @@ html lang="en"
                         a.navlink href="/lankar" Länkar
                     li
                         a.navlink href="/kontaktinfo" Kontaktinformation
+                    li
+                        a.navlink href="/login" Logga in
         header.desktop
             .headerlogo
                 a href="/"

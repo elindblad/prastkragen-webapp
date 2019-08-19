@@ -55,7 +55,7 @@
         height: 6vh
         width: 100%
         display: grid
-        grid-template-columns: 0rem 3rem auto 3rem 0rem
+        grid-template-columns: 0rem 3rem auto 1fr 3rem 0rem
         grid-template-rows: 0rem 1fr 1px 0rem
         grid-column-gap: 1rem
 
@@ -70,16 +70,16 @@
 
     nav.headermobile a.homebtn
         grid-row: 2
-        grid-column: 4
+        grid-column: 5
         display: flex
         justify-content: center
         align-items: center
 
-    nav.headermobile.fixed
-        position: fixed
-
-    header.mobile.fixed
-        display: none
+    nav.headermobile p
+        grid-column: 3
+    
+    nav.headermobile form
+        grid-column: 4
 
     div.mobilemenu 
         height: 0
@@ -96,7 +96,7 @@
                 margin: 24px 0px
                 
     div.show
-        height: 281px
+        height: 325px
 
     a.navlink
         font-size: 1em

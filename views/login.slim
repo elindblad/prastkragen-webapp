@@ -1,0 +1,20 @@
+.coverimgdesktop id="desktop"
+    .centertext
+        p Personal inloggning
+.login
+    h2 Admin inloggning
+-if error?
+    .form
+        form action="/login" method="post"
+            div.fields
+                input type="text" placeholder="Användare" name="UserName"
+                input type="password" placeholder="Lösenord" name="PassWord"
+            input.loginbtn type="submit" value="Logga in"      
+    p = get_error()
+-else
+    .form
+        form action="/login" method="post"
+            div.fields
+                input type="text" placeholder="Användare" name="UserName"
+                input type="password" placeholder="Lösenord" name="PassWord"
+            input.loginbtn type="submit" value="Logga in"
