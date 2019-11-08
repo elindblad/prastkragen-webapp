@@ -224,20 +224,24 @@
         grid-template-rows: auto
 
     div.news h1
-        grid-row: 1
+        grid-row: span 1
         grid-column: 2
+
     div.news article
+        display: grid
+        justify-content: center;
+        align-items: center;
         grid-row: 2
         max-width: 350px
         background-color: white
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
         padding: 20px
         line-height: 1.4em
         font-family: 'Roboto', sans-serif
         font-weight: 300
         margin: 0 14px 30px 14px
-        border-radius: 5px
         max-height: 450px
+        overflow: hidden
 
     div.news 
         h1,h2,h3
@@ -247,6 +251,7 @@
         text-align: center
 
     div.allanyheter a
+        display: inline-block
         color: white
         padding: 1em 1.75em
         background-color: #21B5E2
