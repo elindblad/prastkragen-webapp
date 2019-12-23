@@ -48,6 +48,11 @@ html lang="en"
             .headerlogo
                 a href="/"
                     img src="/img/newlogowhite.png" alt="Logga"/
+            -if get_login_status() != nil
+                div.status
+                    p = "Inloggad som #{get_login_status()}"
+                    form.logoutbtn action="/logout" method="post"
+                        input.btn type="submit" value="Logga ut"
             .mainnav
                 .navbuttons
                     a href="/nyheter" Nyheter

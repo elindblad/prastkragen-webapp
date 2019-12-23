@@ -77,9 +77,29 @@
 
     nav.headermobile p
         grid-column: 3
+        display: flex
+        align-items: center
+        justify-content: center
+        height: inherit
+        margin: 0
     
     nav.headermobile form
         grid-column: 4
+        display: flex
+        align-items: center
+        justify-content: center
+        height: inherit
+
+    nav.headermobile form input
+        font-family: 'Roboto', sans-serif
+        background-color: transparent
+        height: 32px
+        font-size: 16px
+        font-weight: 300
+        border-radius: 2px
+        border: 1px solid black
+        padding-left: 10px
+        color: black
 
     div.mobilemenu 
         height: 0
@@ -174,12 +194,13 @@
         position: fixed
         z-index: 99
         display: table
-        text-align: right
         -webkit-transition: background .4s
         transition: background .4s
 
+
     header.desktop.dark
-        background-color: #222222
+        // background-color: #222222
+        background-color: #1a5d70
 
     header.destkop.img
         width: 100%
@@ -194,6 +215,51 @@
         a,img 
             width: inherit
 
+    div.mainnav
+        color: white !important
+        display: table-cell
+        text-align: right
+        padding-right: 80px
+        vertical-align: middle
+        font-size: 18px
+        font-weight: 300
+        // text-align: left
+        // padding-left: 10px
+
+    div.status
+        display: table-cell
+        vertical-align: middle
+        height: 64px
+        color: white
+        font-size: 18px
+        font-weight: 300
+        padding-left: 15px
+
+    div.status * 
+        display: inline
+        margin: 0 15px 0 0
+
+    div.status input
+        font-family: 'Roboto', sans-serif
+        background-color: transparent
+        height: 32px
+        font-size: 18px
+        font-weight: 300
+        border-radius: 2px
+        border: 1px solid white
+        color: white
+        transition: .3s all
+
+
+    div.status input:hover
+        color: black
+        background: white
+        cursor: pointer;
+
+    div.mainnav a
+        margin: 0 10px
+        color: white
+
     div.coverimgdesktop
         height: 650px
         background-attachment: fixed
@@ -204,20 +270,6 @@
     div#desktop
         background-image: url('/img/coverimg.jpg')
 
-    div.mainnav
-        grid-row: 2
-        grid-column-start: span 4
-        color: white !important
-        display: table-cell
-        text-align: right
-        padding-right: 80px
-        vertical-align: middle
-        font-size: 18px
-        font-weight: 300
-
-    div.mainnav a
-        margin: 0 10px
-        color: white
 
     footer
         
