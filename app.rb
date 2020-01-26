@@ -25,6 +25,10 @@ helpers do
         session[:username] = usr
     end
 
+    def login?
+        !session[:username].nil?
+    end
+    
     def get_login_status()
         usr = session[:username]
         return usr

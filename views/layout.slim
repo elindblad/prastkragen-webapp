@@ -22,10 +22,12 @@ html lang="en"
                 img src="img/newlogo.png" alt="Logga"
         nav.headermobile
             i.material-icons onclick="toggleMenu()" menu
-            -if get_login_status() != nil
+            -if login?
                 p = "Inloggad som #{get_login_status()}"
                 form.logoutbtn action="/logout" method="post"
                     input.btn type="submit" value="Logga ut"
+            -else
+                p yeet
             a.homebtn href="/"
                 i.material-icons style="grid-column: 4;" home
             div.mobilemenu
@@ -48,11 +50,15 @@ html lang="en"
             .headerlogo
                 a href="/"
                     img src="/img/newlogowhite.png" alt="Logga"/
-            -if get_login_status() != nil
-                div.status
+            -if login?
+                .status
                     p = "Inloggad som #{get_login_status()}"
                     form.logoutbtn action="/logout" method="post"
                         input.btn type="submit" value="Logga ut"
+            -else
+                .status
+                    a href="/login" Logga in
+                
             .mainnav
                 .navbuttons
                     a href="/nyheter" Nyheter
