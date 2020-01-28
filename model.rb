@@ -16,7 +16,7 @@ module Model
 
         # Attempts to authenticate the user
         def self.login(params)
-            db = Model::connect()
+            db = Model.connect()
             result = db[:users].first(:UserName => params["UserName"])
             if result == nil
                 return false

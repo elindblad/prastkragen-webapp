@@ -22,12 +22,6 @@ html lang="en"
                 img src="img/newlogo.png" alt="Logga"
         nav.headermobile
             i.material-icons onclick="toggleMenu()" menu
-            -if login?
-                p = "Inloggad som #{get_login_status()}"
-                form.logoutbtn action="/logout" method="post"
-                    input.btn type="submit" value="Logga ut"
-            -else
-                p yeet
             a.homebtn href="/"
                 i.material-icons style="grid-column: 4;" home
             div.mobilemenu
@@ -44,15 +38,21 @@ html lang="en"
                         a.navlink href="/lankar" Länkar
                     li
                         a.navlink href="/kontaktinfo" Kontaktinformation
-                    li
-                        a.navlink href="/login" Logga in
+                    -if login?
+                        li
+                            p = "Inloggad som: #{get_login_status()}"
+                            form.logoutbtn action="/logout" method="post"
+                                input.btn type="submit" value="Logga ut"
+                    -else               
+                        li
+                            a.navlink href="/login" Logga in
         header.desktop
             .headerlogo
                 a href="/"
                     img src="/img/newlogowhite.png" alt="Logga"/
             -if login?
                 .status
-                    p = "Inloggad som #{get_login_status()}"
+                    p = "Inloggad som: #{get_login_status()}"
                     form.logoutbtn action="/logout" method="post"
                         input.btn type="submit" value="Logga ut"
             -else
