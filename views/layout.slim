@@ -73,7 +73,7 @@ html lang="en"
                         i class="fas fa-map-marked-alt"
         div.wrapper
             == yield
-        footer
+        footer.mobile
             a.phone href="tel:031266318"
                 i.material-icons id="contacticon" contact_phone
                 p.phone 031-26 63 18
@@ -83,4 +83,17 @@ html lang="en"
             a.facebook href="https://www.facebook.com/Pr%C3%A4stkragens-F%C3%B6rskola-210900089034186/"
                 i class="fab fa-facebook-square"
                 p.facebook Facebook
+        footer.desktop
+            div.footerinfo
+                a.phone href="tel:031266318"
+                    i class="fa fa-phone fa-flip-horizontal"
+                    p.phone 031-26 63 18
+                a.adress href="https://goo.gl/maps/aAnq4EiFu8A2"
+                    i class="fas fa-map-marked-alt"
+                    p.adress Oxledsvägen 4 43367 SÄVEDALEN
+                a.facebook href="https://www.facebook.com/Pr%C3%A4stkragens-F%C3%B6rskola-210900089034186/"
+                    i class="fab fa-facebook-square"
+                    p.facebook Facebook
+            div.square
+                
         script src="/js/navscroll.js" type="text/javascript"

@@ -130,39 +130,35 @@
         grid-row: 4
         grid-column: 2
         padding: 0 20px 0 20px
+        h1 
+            text-align: center
+            border-bottom: #1a5d70 solid 3px
+            padding-bottom: 10px
+            margin-bottom: 30px
+        article
+            width: 335px
+            height: 335px
+            background-color: white
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+            padding: 20px
+            line-height: 1.4em
+            font-family: 'Roboto', sans-serif
+            font-weight: 300
+            margin-bottom: 30px
+            h2 
+                font-size: 26px
+                text-align: center
+                margin-bottom: 10px
+            h3 
+                text-align: center
+                margin: 0 0 0 0
+                color: #1a5d70
+            span 
+                float: right
+        a 
+            font-weight: 400
+    
 
-    div.news h1 
-        text-align: center
-        border-bottom: #1a5d70 solid 3px
-        padding-bottom: 10px
-        margin-bottom: 30px
-    
-    div.news article 
-        background-color: white
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
-        padding: 20px
-        line-height: 1.4em
-        font-family: 'Roboto', sans-serif
-        font-weight: 300
-        margin-bottom: 30px
-        border-radius: 5px
-    
-    div.news article h2 
-        text-align: center
-        margin-bottom: 5px
-    
-
-    div.news article h3 
-        text-align: center
-        margin: 0 0 0 0
-        color: #1a5d70
-    
-    div.news a 
-        font-weight: 400
-    
-    div.news article span 
-
-        float: right
     div.blanketter 
         padding: 20px 40px 40px 40px
     
@@ -222,30 +218,39 @@
         display: grid
         grid-template-columns: 1fr 1fr 1fr
         grid-template-rows: auto
-
-    div.news h1
-        grid-row: span 1
-        grid-column: 2
-
-    div.news article
-        display: grid
-        justify-content: center;
-        align-items: center;
-        grid-row: 2
-        max-width: 350px
-        background-color: white
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12)
-        padding: 20px
-        line-height: 1.4em
-        font-family: 'Roboto', sans-serif
-        font-weight: 300
-        margin: 0 14px 0 14px
-        max-height: 450px
-        overflow: hidden
-
-    div.news 
-        h1,h2,h3
-            text-align: center
+        justify-items: center
+        h1
+            grid-row: span 1
+            grid-column: 2
+        article
+            width: 335px
+            height: 335px
+            grid-row: 2
+            background-color: white
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+            padding: 20px
+            line-height: 1.4em
+            font-family: 'Roboto', sans-serif
+            font-weight: 300
+            margin: 0 14px 0 14px
+            overflow: hidden
+            text-overflow: ellipsis
+            h2
+                font-size: 26px
+                text-align: center
+                margin-bottom: 10px
+            h3
+                text-align: center
+                margin: 0 0 0 0
+                color: #1a5d70
+            span
+                float: right
+            a
+                display: inline-block
+                border-bottom: 1px solid transparent
+                transition: all 0.3s ease-in-out
+            a:hover
+                border-bottom: 1px solid black
 
     div.allanyheter
         text-align: center
