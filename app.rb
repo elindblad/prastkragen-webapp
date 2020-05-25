@@ -30,19 +30,27 @@ helpers do
     end
     
     def get_login_status()
-        usr = session[:username]
-        return usr
+        return session[:username]
     end
 end
 
 include Model
 
 get('/') do 
-    slim(:index)
+    posts = Post.get
+    slim(:index, locals:{
+            posts: posts
+        }
+    )
 end
 
 get('/nyheter') do
-    slim(:nyheter)
+    posts = Post.get
+    slim(:nyheter, locals:{
+            posts: posts
+        }
+    )
+
 end
 
 get('/verksamhet') do
@@ -69,10 +77,18 @@ get('/login') do
     slim(:login)
 end
 
+get('/newpost') do 
+    slim(:newpost)
+end
+
+post('/newpost') do
+    Post.newpost(params)
+    redirect('/nyheter')
+end
+
 post('/login') do
-    login = Users.login(params)
-    if login != false
-        login_status(login)
+    if User.login(params)!= false
+        login_status(Users.login(params))
         redirect('/')
     else
         set_error("Fel användarnamn eller lösenord!")

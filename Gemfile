@@ -11,6 +11,7 @@ gem 'rerun'
 gem 'pg'
 gem 'sprockets', github: 'rails/sprockets'
 gem 'sassc'
+gem 'irb'
 
 group :development do
     gem 'sqlite3'
