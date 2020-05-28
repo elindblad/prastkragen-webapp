@@ -33,7 +33,7 @@ module Model
 
     module Post
         def self.newpost(params)
-            Db.connect[:news].insert(Title: "#{params["Title"]}", SubTitle: "#{params["SubTitle"]}", Text: "#{"Text"}", ImgId: "1337", Date: Date.today)
+            Db.connect[:news].insert(Title: "#{params["Title"]}", SubTitle: "#{params["SubTitle"]}", Text: "#{params["Text"]}", ImgId: "1337", Date: Date.today)
             # Title
             # Subtitle
             # Text
@@ -41,7 +41,7 @@ module Model
             # Date
         end
         def self.get()
-            return Db.connect[:news]
+            return Db.connect[:news].order(Sequel.desc(:Id)).limit(3)
         end
     end
 end

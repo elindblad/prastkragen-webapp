@@ -50,9 +50,15 @@ get('/nyheter') do
             posts: posts
         }
     )
-
 end
 
+get('/nyheter/art:id') do
+    posts = Post.get
+    slim(:nyheter, locals:{
+            posts: posts
+        }
+    )
+end
 get('/verksamhet') do
     slim(:verksamhet)
 end
