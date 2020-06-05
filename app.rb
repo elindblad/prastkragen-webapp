@@ -94,7 +94,7 @@ end
 
 post('/login') do
     if User.login(params)!= false
-        login_status(Users.login(params))
+        login_status(User.login(params))
         redirect('/')
     else
         set_error("Fel användarnamn eller lösenord!")
