@@ -2,5 +2,21 @@
     .centertext
         p Nyheter
 .newspage
-    h2 Nyheter
     a href="/newpost" Nytt inlägg
+    div.news
+        h1 Nyheter
+        -posts.each do |post|
+            article id="art#{post[:Id]}"
+                .controls
+                    a href="/editpost/#{post[:Id]}"
+                        button
+                            i.material-icons edit
+                    span 
+                        form action="/editpost/#{post[:Id]}/delete" method="POST"
+                            button type="submit" value=""
+                                i.material-icons delete
+                h2 = post[:Title]
+                h3 = post[:SubTitle]
+                p = post[:Text]
+                a href="nyheter/art#{post[:Id]}" Läs mer
+                span = post[:Date]
